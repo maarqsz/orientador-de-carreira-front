@@ -1,0 +1,205 @@
+/* ======= RESET E BASE ======= */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #011a27, #012c3f);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======= CONTAINER PRINCIPAL ======= */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* ======= CARD DO FORMULÁRIO ======= */
+.form-card {
+  background: rgba(0, 40, 70, 0.8);
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease;
+}
+
+/* ======= TÍTULOS ======= */
+h1 {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00eaff;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 25px;
+}
+
+/* ======= FORM ======= */
+.career-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 6px;
+}
+
+.career-form input,
+.career-form textarea,
+.career-form select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.career-form input:focus,
+.career-form textarea:focus,
+.career-form select:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ======= BOTÃO ======= */
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #00eaff;
+}
+
+/* ======= LOADING OVERLAY ======= */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 20, 30, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top: 6px solid #00eaff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loading-overlay p {
+  font-size: 1.1rem;
+  color: #00eaff;
+  text-shadow: 0 0 10px #00eaff;
+}
+
+/* ======= ERRO ======= */
+.error-box {
+  background: rgba(255, 0, 0, 0.15);
+  border-left: 4px solid red;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: #ff8b8b;
+}
+
+/* ======= RESULTADO ======= */
+.result-box {
+  text-align: center;
+  margin-top: 30px;
+  background: rgba(0, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.result-box h2 {
+  color: #00eaff;
+  text-shadow: 0 0 8px #140f0f;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00eaff;
+}
+
+/* ======= ANIMAÇÕES ======= */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 600px) {
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+}
